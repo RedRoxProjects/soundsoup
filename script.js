@@ -1,24 +1,33 @@
-const OSC_FREQUENCY = 440; 
+//set the fundamental frequency
+const FUNDAMENTAL = 220;
 
-//set up Audio Context
+// Create an array of harmonics of the fundamental
+var frequencyList = [FUNDAMENTAL, (FUNDAMENTAL * 2), (FUNDAMENTAL * 3), (FUNDAMENTAL * 4), (FUNDAMENTAL * 5), (FUNDAMENTAL * 6), (FUNDAMENTAL * 7), (FUNDAMENTAL * 8), (FUNDAMENTAL * 9), (FUNDAMENTAL * 10), (FUNDAMENTAL * 11), (FUNDAMENTAL * 12), (FUNDAMENTAL * 13)];
+console.log(frequencyList);
+
+// Load frequency at random from array
+var harmonic = frequencyList[Math.floor(Math.random() * frequencyList.length)]
+console.log(harmonic);
+
+// Set up Audio Context
 var audioContext = new AudioContext(); 
 
-//set up Oscillator
+// Set up Oscillator
 var osc = audioContext.createOscillator();
 
-//set up oscillator frequency
-osc.frequency.value = OSC_FREQUENCY;
+// Set up oscillator frequency
+osc.frequency.value = harmonic;
 
-//start oscillator to audio context
+// Start oscillator to audio context
 osc.start();
 
-//connect oscillator on button press
+// Connect oscillator on button press
 function play() {
     osc.connect(audioContext.destination);
     console.log("started");
 }
 
-//disconnect oscillator when button is not pressed
+// Disconnect oscillator when button is not pressed
 function stop() {
     osc.disconnect(audioContext.destination);
 }
