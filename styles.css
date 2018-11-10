@@ -1,20 +1,43 @@
 body {
-    background: 
+    /* Set background colour */
+    background: #FFFECC;  
+    font-family: 'Quicksand', sans-serif; 
 }
 
-div.ingredient {
-    margin: auto;
-    width: 50%;
+h1 {
     text-align: center;
-
+    font-size: 3rem;
+    text-emphasis: bold;
 }
 
-button {
+div {
+    /* align the div containing button and text */
+    padding: 20px 20px;
+    max-width: 27vw;
+    margin: auto;
+}
+
+div button {
+    /* make background of button transparent & remove border & outline */
     background-color: transparent;
     border: none;
     outline: none;
+    display: block;
+    margin: auto 0;
 }
     
 .veg {
-    max-width: 50vw;
+    /* set size of button relative to viewport*/
+    max-width: 25vw;
+    transition: transform .2s;
+}
+
+.veg:hover { 
+    /* create hover animation */
+    transform:scale(1.2);
+}
+
+p {
+    text-align: center;
+    font-size: 2rem;
 }
