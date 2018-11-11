@@ -41,3 +41,13 @@ p {
     text-align: center;
     font-size: 2rem;
 }
+
+p.about { 
+    max-width: 50vw;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color:  black;
+}
