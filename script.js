@@ -1,3 +1,5 @@
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+
 //set the fundamental frequency
 const FUNDAMENTAL = 220;
 
@@ -46,6 +48,14 @@ function TapOrClick(event) {
     return false;
 }
 
-const veg = document.querySelectorAll(".veg")[0];
-const veggie = Math.floor(Math.random() * 9);
-veg.setAttribute("src", `img/${veggie}.png`);
+$(document).ready(() => {
+    const veggie = Math.floor(Math.random() * 9);
+    console.log(1);
+    const imgPath = 'img/' + veggie + '.png';
+    console.log(2);
+    $(".veg").attr("src", imgPath);
+    console.log(3);
+})
+// const veg = document.querySelectorAll(".veg")[0];
+// const veggie = Math.floor(Math.random() * 9);
+// veg.setAttribute("src", `img/${veggie}.png`);
