@@ -42,9 +42,11 @@ p {
     font-size: 2rem;
 }
 
-p.about { 
+body.about p{ 
     max-width: 50vw;
     margin: auto;
+    font-size: 1.5rem;
+    padding: 10px;
 }
 
 a {

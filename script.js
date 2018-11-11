@@ -45,3 +45,7 @@ function TapOrClick(event) {
     event.preventDefault();
     return false;
 }
+
+const veg = document.querySelectorAll(".veg")[0];
+const veggie = Math.floor(Math.random() * 9);
+veg.setAttribute("src", `img/${veggie}.png`);
