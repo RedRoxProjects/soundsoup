@@ -1,5 +1,5 @@
 //Prevent Android context menu
-document.oncontextmenu = function() {
+window.oncontextmenu = function() {
     return false;
 }
 
