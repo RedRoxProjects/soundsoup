@@ -1,3 +1,8 @@
+//Prevent Android context menu
+document.oncontextmenu = function() {
+    return false;
+}
+
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 
 //set the fundamental frequency
@@ -12,7 +17,7 @@ const harmonic = frequencyList[Math.floor(Math.random() * frequencyList.length)]
 console.log(harmonic);
 
 // Set up Audio Context
-const audioContext = new AudioContext(); 
+const audioContext = new AudioContext();
 
 // Set up Oscillator
 const osc = audioContext.createOscillator();
