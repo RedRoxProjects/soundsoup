@@ -25,14 +25,14 @@
   }
 
   function init() {
-    preventLongPressMenu(document.getElementById('theimage'));
+    preventLongPressMenu(document.getElementById('playbutton'));
   }
 </script>
 <body onload="init()">
     <h1>Sound Soup</h1>
     <div class="ingredient">
     <button onmousedown="play()" onmouseup="stop()" ontouchstart="play()" ontouchend="stop()" id="buttonPress">
-            <img class="veg">
+            <img id "playbutton" class="veg">
         </button>
     </div>
     <p>Press to play</p>
