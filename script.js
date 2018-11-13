@@ -13,8 +13,14 @@ const frequencyList = [FUNDAMENTAL, (FUNDAMENTAL * 2), (FUNDAMENTAL * 3), (FUNDA
 console.log(frequencyList);
 
 // Load frequency at random from array
-const harmonic = frequencyList[Math.floor(Math.random() * frequencyList.length)]
-console.log(harmonic);
+const harmonicRank = Math.floor(Math.random() * frequencyList.length)
+const harmonic = frequencyList[harmonicRank]
+console.log("Harmonic Rank: " + harmonicRank);
+console.log("Frequency: " + harmonic);
+
+// Load appropriate gain for sawtooth slope
+const volume = 1/harmonicRank;
+console.log("Volume: " + volume);
 
 // Set up Audio Context
 const audioContext = new AudioContext();
@@ -22,21 +28,33 @@ const audioContext = new AudioContext();
 // Set up Oscillator
 const osc = audioContext.createOscillator();
 
+// Set up Amplifier
+const amplifier = audioContext.createGain();
+
 // Set up oscillator frequency
 osc.frequency.value = harmonic;
+
+//Initialise amplifier volume
+amplifier.gain.value = 0;
+
+//Connect the Oscillator to the Amplifier
+osc.connect(amplifier);
+
+//Connect Amplifier to output
+amplifier.connect(audioContext.destination);
 
 // Start oscillator to audio context
 osc.start();
 
-// Connect oscillator on button press
+// Turn on amplifier on button press
 function play() {
-    osc.connect(audioContext.destination);
+    amplifier.gain.value = volume;
     console.log("started");
 }
 
 // Disconnect oscillator when button is not pressed
 function stop() {
-    osc.disconnect(audioContext.destination);
+    amplifier.gain.value = 0;
 }
 
 function endTapOrClick(event) {
