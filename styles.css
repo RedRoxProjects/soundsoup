@@ -24,6 +24,8 @@ div button {
     outline: none;
     display: block;
     margin: auto 0;
+	/* iOS fix? */
+	cursor:pointer;
 }
     
 .veg {
