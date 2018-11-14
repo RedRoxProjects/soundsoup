@@ -1,7 +1,7 @@
 body {
     /* Set background colour */
-    background: #FFFECC;
-    font-family: 'Quicksand', sans-serif;
+    background: #FFFECC;  
+    font-family: 'Quicksand', sans-serif; 
 }
 
 h1 {
@@ -24,17 +24,27 @@ div button {
     outline: none;
     display: block;
     margin: auto 0;
+<<<<<<< HEAD
+<<<<<<< HEAD
 	/* iOS fix? */
+<<<<<<< HEAD
     cursor:pointer;
+=======
+>>>>>>> parent of 5b4ca09... iOS fix attempt
+=======
+	cursor:pointer;
+>>>>>>> parent of 65fcd82... Fastclick attempt
+=======
+>>>>>>> parent of 5b4ca09... iOS fix attempt
 }
-
+    
 .veg {
     /* set size of button relative to viewport*/
     max-width: 25vw;
     transition: transform .2s;
 }
 
-.veg:hover {
+.veg:hover { 
     /* create hover animation */
     transform:scale(1.2);
 }
@@ -44,7 +54,7 @@ p {
     font-size: 2rem;
 }
 
-body.about p{
+body.about p{ 
     max-width: 50vw;
     margin: auto;
     font-size: 1.5rem;
