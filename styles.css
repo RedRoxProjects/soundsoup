@@ -1,7 +1,7 @@
 body {
     /* Set background colour */
-    background: #FFFECC;  
-    font-family: 'Quicksand', sans-serif; 
+    background: #FFFECC;
+    font-family: 'Quicksand', sans-serif;
 }
 
 h1 {
@@ -25,16 +25,16 @@ div button {
     display: block;
     margin: auto 0;
 	/* iOS fix? */
-	cursor:pointer;
+    cursor:pointer;
 }
-    
+
 .veg {
     /* set size of button relative to viewport*/
     max-width: 25vw;
     transition: transform .2s;
 }
 
-.veg:hover { 
+.veg:hover {
     /* create hover animation */
     transform:scale(1.2);
 }
@@ -44,7 +44,7 @@ p {
     font-size: 2rem;
 }
 
-body.about p{ 
+body.about p{
     max-width: 50vw;
     margin: auto;
     font-size: 1.5rem;

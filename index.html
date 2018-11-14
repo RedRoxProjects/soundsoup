@@ -8,14 +8,15 @@
     <meta name="viewport" content="initial-scale=1.0">
 </head>
 <body>
+    <script src = "js/fastclick.min.js"></script>
     <h1>Sound Soup</h1>
     <div class="ingredient">
-    <button onmousedown="play()" onmouseup="stop()" ontouchstart="play()" ontouchend="stop()" id="buttonPress">
+    <button class=”fastclick”  onmousedown="play()" onmouseup="stop()" ontouchstart="play()" ontouchend="stop()" id="buttonPress">
             <img class="veg">
         </button>
     </div>
     <p>Press to play</p>
-    <p><a href="about.html">What is this all about?</a></p> 
+    <p><a href="about.html">What is this all about?</a></p>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="script.js"></script>

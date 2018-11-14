@@ -1,7 +1,10 @@
-//Prevent Android context menu
-window.oncontextmenu = function() {
-    return false;
-}
+var attachFastClick = Origami.fastclick;
+attachFastClick(document.body);
+
+////Prevent Android context menu
+//window.oncontextmenu = function() {
+//    return false;
+//}
 
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 
